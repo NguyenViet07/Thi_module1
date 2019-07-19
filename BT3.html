@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function printFibonaci() {
+        var number = parseInt(prompt("Enter number"));
+        console.log(number);
+        var numberStart = 1 ;
+        var fibonaci = "";
+        while(numberStart<number){
+            if(isFibonaci(numberStart) === true){
+                fibonaci += numberStart+" ";
+            }
+            numberStart++;
+        }
+        document.write("Các số fibonaci là: 1 " +fibonaci);
+    }
+    function isFibonaci(n) {
+        a = 1;
+        b = 1;
+        while (b<n){
+            c  =  b;
+            b +=  a;
+            a  =  c;
+        }
+        return (b===n);
+    }
+    printFibonaci();
+
+</script>
+
+</body>
+</html>
